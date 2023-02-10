@@ -1,0 +1,25 @@
+.linea-adorno{
+    color: #8d9199;
+    width: 100px;
+    height: 10px;
+    margin: 0 auto;
+    transition: 0.3s;
+}
+
+.linea-adorno-left{
+    color: #a18d8d;
+    width: 100px;
+    height: 10px;
+    transition: 0.3s;
+}
+
+.linea-adorno-left:hover{
+    width: 350px;
+}
+.linea-adorno:hover{
+    width: 190px;
+}
+
+.hover-collapse:hover{
+    color: #8d9199;
+}

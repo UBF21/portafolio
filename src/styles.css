@@ -1,1 +1,128 @@
-/* You can add global styles to this file, and also import other style files */
+html{
+    scroll-behavior: smooth;
+}
+
+
+body::-webkit-scrollbar{
+    width: 15px;
+}
+
+body::-webkit-scrollbar-thumb{
+   background: #1c1e2d;
+   border-radius: 10px;
+}
+
+
+.mode{
+    font-size: 1.5rem;
+    background-color: rgb(32, 32, 32);
+}
+
+.img{
+
+    width: 400px;
+    border-radius: 104px 104px 104px 104px;
+    -webkit-border-radius: 104px 104px 104px 104px;
+    -moz-border-radius: 104px 104px 104px 104px;
+}
+
+.fondo-seccion-primary{
+ background-color: white;   
+}
+
+.fondo-seccion-secondary{
+    background-color:#1c1e2d;
+}
+
+.fondo-seccion-third{
+    background-color:#f8e9ed;
+}
+
+.linea-adorno{
+    color: #8d9199;
+    width: 100px;
+    height: 10px;
+    margin: 0 auto;
+    transition: 0.3s;
+}
+
+.linea-adorno-left{
+    color: #a18d8d;
+    width: 100px;
+    height: 10px;
+    transition: 0.3s;
+}
+
+.linea-adorno-left:hover{
+    width: 350px;
+}
+.linea-adorno:hover{
+    width: 190px;
+}
+
+.text-titulo{
+    font-size: 3.5rem;
+    
+}
+
+.text-color-secondary{
+    color: #383742;
+}
+
+.text-subTitulo{
+    
+    font-size: 1.8rem;
+}
+
+.text-parrafo{
+    font-size: 1.2rem;
+}
+
+.text-parrafo-small{
+    font-size: 1.1rem;
+}
+
+.text-family-courier{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.text-family-monospace{
+    font-family: 'Inconsolata', monospace;
+    font-weight: 400;
+}
+
+.text-family-helvetica{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.text-family-times{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.text-hover{
+    transition: 0.3s;
+}
+
+.text-hover:hover{
+    color: rgb(138, 88, 88);
+}
+
+.navbar-brand{
+    
+    font-weight: bold;
+    font-size: 1.4rem;
+    transition: 0.3s;
+}
+
+.navbar-brand:hover{
+    color: rgb(138, 88, 88);
+}
+
+.nav-item{
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
+
+.nav-item:hover{
+color: #153379;
+}

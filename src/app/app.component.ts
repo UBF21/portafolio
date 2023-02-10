@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'appPortafolioWeb';
+  seDesplego:boolean = false;
+
+  cambiar(){
+    this.seDesplego = !this.seDesplego;
+  }
 }
+
