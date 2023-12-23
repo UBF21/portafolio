@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { delay } from 'rxjs';
+import { GithubRepoService } from 'src/app/services/github-repo.service';
 
 @Component({
   selector: 'app-portafolio',
@@ -7,9 +9,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PortafolioComponent implements OnInit {
 
-  constructor() { }
+  repos: any[] = [];
+  isLoading:boolean = true;
+
+  constructor(private githubService: GithubRepoService) { }
 
   ngOnInit(): void {
+    this.githubService.getRepos()
+      .pipe(delay(2000))
+      .subscribe(
+        {
+          next: (response) => {
+            this.isLoading = false; 
+            this.repos = response;
+          },
+          error: (error) => { console.log(error) }
+        }
+        );
   }
 
 }

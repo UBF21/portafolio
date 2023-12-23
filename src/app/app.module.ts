@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -8,7 +9,6 @@ import { HomeComponent } from './paginas/home/home.component';
 import { PortafolioComponent } from './paginas/portafolio/portafolio.component';
 import { FooterComponent } from './componentes/footer/footer.component';
 import { RouterModule } from '@angular/router';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +20,8 @@ import { RouterModule } from '@angular/router';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule
+    RouterModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

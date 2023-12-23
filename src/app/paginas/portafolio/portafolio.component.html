@@ -1,1 +1,75 @@
-<p>portafolio works!</p>
+<div class="container mt-5">
+
+    <div class="d-flex justify-content-center align-items-center vh-100 animate__animated animate__fadeIn" *ngIf="isLoading">
+        <div class="loader-repo"></div>
+    </div>
+
+    <div class="row g-2" *ngIf="!isLoading">
+            <h2 class="fw-bold text-center mb-3">Portafolio de Proyectos</h2>
+        <div class="col-12 col-sm-4 col-md-6 col-lg-4 animate__animated animate__fadeIn" *ngFor="let repo of repos;let i = index">
+            <div class="card border-0 shadow">
+                <!-- <div class="d-flex justify-content-center mt-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-github">
+                        <path
+                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                        </path>
+                    </svg>
+                </div> -->
+                <div class="card-body">
+                    <h5 class="card-title">{{ repo.name }}</h5>
+                    <p class="card-text">{{repo.description | slice:0:32}}...</p>
+                    <a [href]="repo.html_url" target="_blank" class="btn btn-outline-dark me-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="feather feather-external-link">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                    </a>
+                    <a class="btn btn-outline-dark" data-bs-toggle="modal" [attr.data-bs-target]="'#detalle'+i">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="feather feather-eye">
+                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                            <circle cx="12" cy="12" r="3"></circle>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Modal -->
+                <div class="modal fade" [id]="'detalle'+i" data-bs-backdrop="static" data-bs-keyboard="false"
+                    tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel">{{repo.name}}</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <h6>Descripción</h6>
+                                <p>{{ repo.description}}</p>
+                                <h6>Tecnologías</h6>
+                                <div class="row">
+                                    <div class="col-4" *ngFor="let topic of repo.topics">
+                                        <span class="badge rounded-pill bg-dark">{{topic}}</span>
+                                    </div>
+                                </div>
+                                <a [href]="repo.homepage" target="_blank" class="btn btn-outline-dark mt-5">ver demo</a>
+                            </div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
