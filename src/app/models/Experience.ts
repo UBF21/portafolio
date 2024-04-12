@@ -5,6 +5,7 @@ export class Experience{
      fechaInicio:string;
      fechaFinal:string;
      puesto:string;
+     empresa:string;
      descripcion:string;
      caracteristicas:Characteristics[];
      tecnologias:Technologies[];
@@ -13,6 +14,7 @@ export class Experience{
         this.fechaInicio = "";
         this.fechaFinal = "";
         this.puesto = "";
+        this.empresa = "";
         this.descripcion = "";
         this.caracteristicas = [];
         this.tecnologias = [];

@@ -6,7 +6,7 @@ export const environment = {
   production: false,
   BASE_URL : 'https://api.github.com',
   USER : 'UBF21',
-  TOKEN_GITHUB:'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'
+  TOKEN_GITHUB:'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'
 };
 
 /*

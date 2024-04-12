@@ -18,6 +18,7 @@ export class HomeComponent implements OnInit {
       {
         fechaInicio: "Agosto 2023",
         fechaFinal: "Diciembre 2023",
+        empresa: "CA Sistemas",
         puesto: "Analista Programador",
         descripcion: `Mi trabajo se centraba en el
         análisis ,construcción,mantenimiento y soporte de los
@@ -40,7 +41,36 @@ export class HomeComponent implements OnInit {
           { descripcion: 'Bootstrap' },
           { descripcion: 'CSS' },
           { descripcion: 'REST Api' },
-          { descripcion: '.Net Core' },
+          { descripcion: '.Net Core' }
+        ]
+      },
+      {
+        fechaInicio: "Enero 2024",
+        fechaFinal: "Actualmente",
+        puesto: "Programador",
+        empresa: "GLOBALTPA Soluctions",
+        descripcion: `Mi Trabajo se en el
+        análisis ,construcción,mantenimiento y soporte de los
+        requerimientos solicitados por los clientes en los sistemas
+        que brinda la empresa.`,
+        caracteristicas:[
+          {descripcion : "Desarrollo de UI."},
+          {descripcion : "Desarrollo de Procedimientos Almacenados (SqlServer)."},
+          {descripcion : "Desarrollo de Querys."},
+          {descripcion : "Desarrollo de Módulos del sistema."}
+        ],
+        tecnologias:[
+          { descripcion: 'C#' },
+          { descripcion: 'Javascript' },
+          { descripcion: 'Sql' },
+          { descripcion: '.Net MVC' },
+          { descripcion: 'Ado.net' },
+          { descripcion: 'SqlServer' },
+          { descripcion: 'HTML5' },
+          { descripcion: 'Bootstrap' },
+          { descripcion: 'CSS' },
+          { descripcion: 'REST Api' },
+          { descripcion: '.Net Core' }
         ]
       }
     ]

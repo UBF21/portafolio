@@ -125,8 +125,8 @@
 
   </section>
 
-  <section class="p-4 fondo-seccion-primary" id="experience">
-    <h3 class="mt-5 text-family-times text-color-secondary fw-bold text-titulo">Experiencia</h3>
+  <section class="p-3 fondo-seccion-primary" id="experience">
+    <h3 class="mt-0 mt-lg-5 text-family-times text-color-secondary fw-bold text-titulo">Experiencia</h3>
     <hr class="linea-adorno-left" />
 
 
@@ -134,7 +134,7 @@
       <!-- Experiencia de Trabajo-->
       <div class="mt-5">
         <p class="fst-italic">{{ experience.fechaInicio }} - {{ experience.fechaFinal }}</p>
-        <h3 class="text-subTitulo">{{ experience.puesto }}</h3>
+        <h4 class="text-subTitulo">{{ experience.puesto }} ( {{ experience.empresa }} )</h4>
         <p class="text-break  text-parrafo  text-family-monospace lh-lg">{{ experience.descripcion | slice:0:125 }}...
         </p>
 
