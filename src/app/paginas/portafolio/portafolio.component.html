@@ -8,15 +8,7 @@
             <h2 class="fw-bold text-center mb-3">Portafolio de Proyectos</h2>
         <div class="col-12 col-sm-4 col-md-6 col-lg-4 animate__animated animate__fadeIn" *ngFor="let repo of repos;let i = index">
             <div class="card border-0 shadow">
-                <!-- <div class="d-flex justify-content-center mt-4">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="feather feather-github">
-                        <path
-                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-                        </path>
-                    </svg>
-                </div> -->
+                
                 <div class="card-body">
                     <h5 class="card-title">{{ repo.name }}</h5>
                     <p class="card-text">{{repo.description | slice:0:32}}...</p>
@@ -29,7 +21,7 @@
                             <line x1="10" y1="14" x2="21" y2="3"></line>
                         </svg>
                     </a>
-                    <a class="btn btn-outline-dark" data-bs-toggle="modal" [attr.data-bs-target]="'#detalle'+i">
+                    <a class="btn btn-outline-dark" data-bs-toggle="modal" [attr.data-bs-target]="'#item-'+i">
                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                             class="feather feather-eye">
@@ -40,7 +32,7 @@
                 </div>
 
                 <!-- Modal -->
-                <div class="modal fade" [id]="'detalle'+i" data-bs-backdrop="static" data-bs-keyboard="false"
+                <div class="modal fade" [id]="'item-'+i" data-bs-backdrop="static" data-bs-keyboard="false"
                     tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
@@ -67,9 +59,11 @@
                         </div>
                     </div>
                 </div>
+
             </div>
 
-
         </div>
+
+        
     </div>
 </div>
