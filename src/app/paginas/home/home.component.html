@@ -5,7 +5,7 @@
 
     <div class="vh-100 row align-items-center justify-content-center g-0">
 
-      <div class="col-lg-7 col-md-12 col-sm-12 text-center animate__animated animate__fadeIn">
+      <div class="col-lg-7 col-md-12 col-sm-12 mt-5 mt-sm-0 mt-md-0 mt-lg-0 text-center animate__animated animate__fadeIn">
         <img src="./assets/img/foto.jpg" class="img-fluid shadow-lg img" alt="Imagen presentación">
       </div>
 
@@ -188,6 +188,21 @@
 
       </div>
     </ng-container>
+
+  </section>
+
+
+  <section class="p-4 rounded-top fondo-seccion-secondary mt-4" id="Technologies">
+    <h3 class="text-white mt-4  text-family-times fw-bold text-titulo">Tecnologías</h3>
+    <hr class="linea-adorno-left" />
+
+    <div class="row">
+      <div class="col-4 col-sm-3 col-md-3 col-lg-3 text-center" *ngFor="let tecnologia of tecnologias">
+        <i [class]="tecnologia.icon" style="font-size: 100px;"></i>
+        <p class="text-white fw-bold">{{  tecnologia.descripcion }}</p>
+      </div>
+      
+    </div>
 
   </section>
 
